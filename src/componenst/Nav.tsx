@@ -1,3 +1,4 @@
+import React from "react";
 
 const NavList = [
   { name: "Home", path: "/" },
