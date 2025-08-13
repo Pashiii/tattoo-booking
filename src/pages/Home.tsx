@@ -60,38 +60,38 @@ const Home = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl w-full">
-              <div className="flex items-center space-x-4 bg-gray-900 p-4 rounded">
-                <FaUserCheck className="text-amber-600 text-2xl" />
-                <span className="text-lg text-gray-200">
+              <div className="flex items-center space-x-4 bg-secondary p-4 rounded">
+                <FaUserCheck className="text-secondary-bg text-2xl" />
+                <span className="text-lg text-secondary-bg">
                   Experienced and passionate tattoo artists
                 </span>
               </div>
-              <div className="flex items-center space-x-4 bg-gray-900 p-4 rounded">
-                <FaShieldAlt className="text-amber-600 text-2xl" />
-                <span className="text-lg text-gray-200">
+              <div className="flex items-center space-x-4 bg-secondary p-4 rounded">
+                <FaShieldAlt className="text-secondary-bg text-2xl" />
+                <span className="text-lg text-secondary-bg">
                   Clean, safe, and welcoming environment
                 </span>
               </div>
-              <div className="flex items-center space-x-4 bg-gray-900 p-4 rounded">
-                <FaPenFancy className="text-amber-600 text-2xl" />
-                <span className="text-lg text-gray-200">
+              <div className="flex items-center space-x-4 bg-secondary p-4 rounded">
+                <FaPenFancy className="text-secondary-bg text-2xl" />
+                <span className="text-lg text-secondary-bg">
                   Custom designs tailored to your ideas
                 </span>
               </div>
-              <div className="flex items-center space-x-4 bg-gray-900 p-4 rounded">
-                <FaStar className="text-amber-600 text-2xl" />
-                <span className="text-lg text-gray-200">
+              <div className="flex items-center space-x-4 bg-secondary p-4 rounded">
+                <FaStar className="text-secondary-bg text-2xl" />
+                <span className="text-lg text-secondary-bg">
                   High-quality inks and equipment
                 </span>
               </div>
-              <div className="flex items-center space-x-4 bg-gray-900 p-4 rounded">
-                <FaSmile className="text-amber-600 text-2xl" />
-                <span className="text-lg text-gray-200">
+              <div className="flex items-center space-x-4 bg-[#201E1F] p-4 rounded">
+                <FaSmile className="text-secondary-bg text-2xl" />
+                <span className="text-lg text-secondary-bg">
                   Friendly customer service and aftercare support
                 </span>
               </div>
             </div>
-            <button className="text-white bg-amber-700 p-6 font-semibold text-xl hover:bg-amber-800 hover:p-7 transition-all  duration-300">
+            <button className="text-secondary bg-secondary-bg p-6 font-semibold text-xl hover:bg-amber-700 hover:text-primary hover:p-7 transition-all  duration-300">
               Learn more about us
             </button>
           </div>

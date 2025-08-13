@@ -2,7 +2,11 @@
 @import "tailwindcss";
 
 @theme{
-    --font-roboto: "Roboto", sans-serif; 
+    --font-roboto: "Roboto", sans-serif;
+    --color-background: #000000; 
+    --color-secondary: #201E1F;
+    --color-primary: #f0f0f0;
+    --color-secondary-bg: #ffcda2;
 }
 
 .container {

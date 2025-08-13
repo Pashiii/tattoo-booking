@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const NavList = [
@@ -8,7 +8,7 @@ const NavList = [
 ];
 
 const Nav = () => {
-  const [scrollY, setScrollY] = React.useState(false);
+  const [scrollY, setScrollY] = useState(false);
   window.addEventListener("scroll", function () {
     if (this.window.scrollY > 350) {
       setScrollY(true);
@@ -36,13 +36,13 @@ const Nav = () => {
               </li>
             ))}
           </ul>
-          <button className="bg-amber-600 p-3 font-bold hover:bg-amber-700 transition-colors duration-300">
+          <button className="bg-[#ffcda2] text-secondary p-3 font-bold hover:bg-amber-700 hover:text-primary transition-colors duration-300">
             Book now
           </button>
-          <div className="flex items-center justify-center gap-3 text-3xl ml-5">
-            <FaFacebook />
-            <FaInstagram />
-            <FaTwitter />
+          <div className="flex items-center justify-center gap-3 text-3xl ml-5 ">
+            <FaFacebook className="hover:text-amber-700 transition-colors duration-300" />
+            <FaInstagram className="hover:text-amber-700 transition-colors duration-300" />
+            <FaTwitter className="hover:text-amber-700 transition-colors duration-300" />
           </div>
         </div>
       </div>
