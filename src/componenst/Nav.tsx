@@ -36,7 +36,7 @@ const Nav = () => {
               </li>
             ))}
           </ul>
-          <button className="bg-amber-600 p-3 font-bold hover:bg-amber-700 transition-colors duration-300">
+          <button className="bg-[#ffcda2] text-secondary p-3 font-bold hover:bg-amber-700 hover:text-primary transition-colors duration-300">
             Book now
           </button>
           <div className="flex items-center justify-center gap-3 text-3xl ml-5 ">
