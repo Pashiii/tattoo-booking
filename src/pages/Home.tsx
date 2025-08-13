@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <div className="w-full h-screen bg-black">
       <div
-        className="w-full h-160 bg-fixed"
+        className="w-full h-screen bg-fixed"
         style={{
           backgroundImage: `url(${Header})`,
           backgroundSize: "cover",
