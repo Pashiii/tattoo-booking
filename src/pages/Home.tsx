@@ -98,6 +98,7 @@ const Home = () => {
               Learn more about us
             </button>
           </div>
+
           <div className="relative flex  justify-center ">
             <img src={tattooImage1} alt="" className="h-100 w-80" />
             <img
@@ -106,7 +107,7 @@ const Home = () => {
               style={{
                 transform: `translateY(${offset * 0.03}px)`,
               }}
-              className="h-100 w-80 absolute top-50 right-30 transition-transform duration-500 ease-out "
+              className="h-100 w-80 absolute top-50 right-30 transition-transform duration-500 ease-out"
             />
           </div>
         </div>

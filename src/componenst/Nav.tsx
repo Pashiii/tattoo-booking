@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+import MobileNav from "./MobileNav";
 
-const NavList = [
+const navList = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
@@ -9,6 +11,11 @@ const NavList = [
 
 const Nav = () => {
   const [scrollY, setScrollY] = useState(false);
+  const [showNav, setShowNav] = useState(false);
+
+  const handleShowNavBar = () => {
+    setShowNav(!showNav);
+  };
   window.addEventListener("scroll", function () {
     if (this.window.scrollY > 350) {
       setScrollY(true);
@@ -19,15 +26,21 @@ const Nav = () => {
 
   return (
     <div
-      className={`fixed  w-full flex justify-between items-center p-5 text-white font-roboto ${
+      className={`fixed w-full  p-5 text-white font-roboto ${
         scrollY ? "bg-black" : "bg-transparent"
-      } transition-all duration-500`}
+      } transition-all duration-500 z-50`}
     >
+      <MobileNav
+        navList={navList}
+        handleShowNavBar={handleShowNavBar}
+        showNav={showNav}
+      />
+
       <div className="flex justify-between items-center w-full container">
         <div className="font-bold text-2xl">LOGO</div>
-        <div className="flex items-center space-x-4">
+        <div className="lg:flex items-center space-x-4 hidden">
           <ul className="flex space-x-6 font-medium">
-            {NavList.map((list, index) => (
+            {navList.map((list, index) => (
               <li
                 key={index}
                 className="hover:text-amber-600 transition-colors duration-300"
@@ -45,6 +58,11 @@ const Nav = () => {
             <FaTwitter className="hover:text-amber-700 transition-colors duration-300" />
           </div>
         </div>
+
+        <GiHamburgerMenu
+          className="text-3xl block lg:hidden"
+          onClick={handleShowNavBar}
+        />
       </div>
     </div>
   );
