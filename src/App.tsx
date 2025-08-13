@@ -1,4 +1,3 @@
-import React from "react";
 import Nav from "./componenst/Nav";
 import Home from "./pages/Home";
 
