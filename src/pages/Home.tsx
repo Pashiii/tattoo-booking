@@ -48,15 +48,18 @@ const Home = () => {
           <div className="text-white space-y-5 mx-10">
             <h1 className="text-4xl font-bold">Our Services</h1>
             <p className="text-lg">
-              We offer a wide range of tattoo styles and services to suit your
-              needs. From traditional to modern designs, our skilled artists are
-              here to bring your vision to life.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae ab sunt velit ratione minima consequatur exercitationem
+              nisi error maxime commodi. Cum cumque tenetur illum odit quas
+              maxime minima qui facilis?
             </p>
             <div>
               <p className="text-lg">
-                Whether you're looking for a small piece or a full sleeve, we
-                have the expertise to create stunning tattoos that you'll be
-                proud to wear.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+                minima obcaecati perferendis, in dignissimos tenetur repellat,
+                illo iure eligendi necessitatibus nostrum, architecto recusandae
+                exercitationem provident doloribus quod minus doloremque
+                corporis.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl w-full">
