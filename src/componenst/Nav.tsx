@@ -19,7 +19,7 @@ const Nav = () => {
   return (
     <div
       className={`fixed top-0 right-0 w-full flex justify-between items-center p-5 text-white ${
-        scrollY ? "bg-gray-950" : "bg-transparent"
+        scrollY ? "bg-black" : "bg-transparent"
       } transition-all duration-500`}
     >
       <div className="font-bold text-2xl">LOGO</div>
