@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../assets/images/header.jpg";
 import tattooImage1 from "../assets/images/img3.jpg";
 import tattooImage2 from "../assets/images/img2.jpg";
