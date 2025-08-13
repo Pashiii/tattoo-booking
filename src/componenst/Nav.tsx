@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const NavList = [
   { name: "Home", path: "/" },
@@ -18,23 +19,32 @@ const Nav = () => {
 
   return (
     <div
-      className={`fixed top-0 right-0 w-full flex justify-between items-center p-5 text-white ${
+      className={`fixed  w-full flex justify-between items-center p-5 text-white font-roboto ${
         scrollY ? "bg-black" : "bg-transparent"
       } transition-all duration-500`}
     >
-      <div className="font-bold text-2xl">LOGO</div>
-      <div className="flex items-center space-x-4">
-        <ul className="flex space-x-6 font-medium">
-          {NavList.map((list, index) => (
-            <li
-              key={index}
-              className="hover:text-amber-600 transition-colors duration-300"
-            >
-              <a>{list.name}</a>
-            </li>
-          ))}
-        </ul>
-        <button className="bg-amber-600 p-3 font-bold">Book now</button>
+      <div className="flex justify-between items-center w-full container">
+        <div className="font-bold text-2xl">LOGO</div>
+        <div className="flex items-center space-x-4">
+          <ul className="flex space-x-6 font-medium">
+            {NavList.map((list, index) => (
+              <li
+                key={index}
+                className="hover:text-amber-600 transition-colors duration-300"
+              >
+                <a>{list.name}</a>
+              </li>
+            ))}
+          </ul>
+          <button className="bg-amber-600 p-3 font-bold hover:bg-amber-700 transition-colors duration-300">
+            Book now
+          </button>
+          <div className="flex items-center justify-center gap-3 text-3xl ml-5">
+            <FaFacebook />
+            <FaInstagram />
+            <FaTwitter />
+          </div>
+        </div>
       </div>
     </div>
   );

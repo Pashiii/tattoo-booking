@@ -17,7 +17,7 @@ const Home = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="w-full h-screen bg-black">
+    <div className="w-full h-screen bg-black font-roboto">
       <div
         className="w-full h-screen bg-fixed"
         style={{
@@ -27,17 +27,17 @@ const Home = () => {
         }}
       >
         <div className="bg-black/50  w-full h-full flex flex-col justify-center items-center">
-          <h1 className="text-4xl text-white font-bold uppercase">
+          <h1 className="text-5xl text-white font-extrabold uppercase ">
             Welcome to Our Tattoo Shop
           </h1>
           <h1 className="text-2xl text-white mt-2">
             Your journey to self-expression starts here
           </h1>
           <div className="mt-5 space-x-4">
-            <button className="p-5 text-white border-1 font-bold">
+            <button className="p-5 text-white border-1 font-bold hover:bg-amber-700 hover:border-amber-700 transition-colors duration-300 ">
               BOOK NOW
             </button>
-            <button className="p-5 text-white border-1 font-bold">
+            <button className="p-5 text-white border-1 font-bold hover:bg-amber-700 hover:border-amber-700 transition-colors duration-300 ">
               LEARN MORE
             </button>
           </div>
@@ -45,7 +45,7 @@ const Home = () => {
       </div>
       <div className="bg-black border-t-1 border-gray-600 w-full h-[1000px] flex flex-col justify-center items-center p-10 space-y-5">
         <div className="grid grid-cols-2">
-          <div className="text-white space-y-5">
+          <div className="text-white space-y-5 mx-10">
             <h1 className="text-4xl font-bold">Our Services</h1>
             <p className="text-lg">
               We offer a wide range of tattoo styles and services to suit your
@@ -91,19 +91,19 @@ const Home = () => {
                 </span>
               </div>
             </div>
-            <button className="text-white bg-amber-700 p-6 font-bold text-xl">
+            <button className="text-white bg-amber-700 p-6 font-semibold text-xl hover:bg-amber-800 hover:p-7 transition-all  duration-300">
               Learn more about us
             </button>
           </div>
-          <div className="relative flex mx-20">
+          <div className="relative flex  justify-center ">
             <img src={tattooImage1} alt="" className="h-100 w-80" />
             <img
               src={tattooImage2}
               alt=""
               style={{
-                transform: `translateY(${offset * 0.02}px)`,
+                transform: `translateY(${offset * 0.03}px)`,
               }}
-              className="h-100 w-80 absolute top-50 left-40 transition-transform duration-500 ease-out "
+              className="h-100 w-80 absolute top-50 right-30 transition-transform duration-500 ease-out "
             />
           </div>
         </div>
