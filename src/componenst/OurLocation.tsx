@@ -2,8 +2,8 @@ import Studio from "../assets/images/studio.jpg";
 const OurLocation = () => {
   return (
     <div className="flex flex-col items-center  h-full bg-white p-10">
-      <h1 className="font-bold text-6xl font-righteous">Our Location</h1>
-      <p className="text-lg text-gray-600 mt-2 w-1/2 text-center">
+      <h1 className="font-bold text-6xl font-righteous text-center">Our Location</h1>
+      <p className="text-lg text-gray-600 mt-2 w-full lg:w-1/2 text-center">
         Discover our branches across the Philippines. Visit us in Manila, Cebu,
         or Davao for your next tattoo experience!
       </p>
