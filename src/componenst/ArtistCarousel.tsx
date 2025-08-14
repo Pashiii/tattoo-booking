@@ -7,7 +7,7 @@ interface Artist {
   position: string;
 }
 const ArtistCarousel: React.FC = () => {
-  const artists = [
+  const artists: Artist[] = [
     { img: img2, name: "Full Name", position: "Tattoo & Piercing" },
     { img: img2, name: "Full Name", position: "Tattoo" },
     { img: img2, name: "Full Name", position: "Tattoo" },
