@@ -17,7 +17,7 @@ const Nav = () => {
     setShowNav(!showNav);
   };
   window.addEventListener("scroll", function () {
-    if (this.window.scrollY > 350) {
+    if (this.window.scrollY > 150) {
       setScrollY(true);
     } else {
       setScrollY(false);

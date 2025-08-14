@@ -9,6 +9,8 @@ import {
   FaStar,
   FaUserCheck,
 } from "react-icons/fa";
+import OurLocation from "../componenst/OurLocation";
+import Service from "../componenst/Service";
 const Home = () => {
   const [offset, setOffset] = useState(0);
   useEffect(() => {
@@ -17,7 +19,7 @@ const Home = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="w-full h-screen bg-black font-roboto">
+    <div className="w-full h-full bg-black font-roboto">
       <div
         className="w-full h-screen bg-fixed"
         style={{
@@ -27,7 +29,7 @@ const Home = () => {
         }}
       >
         <div className="bg-black/50  w-full h-full flex flex-col justify-center items-center">
-          <h1 className="text-5xl text-white font-extrabold uppercase ">
+          <h1 className="text-center text-5xl text-white font-extrabold uppercase font-righteous">
             Welcome to Our Tattoo Shop
           </h1>
           <h1 className="text-2xl text-white mt-2">
@@ -43,75 +45,77 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="bg-black border-t-1 border-gray-600 w-full h-[1000px] flex flex-col justify-center items-center p-10 space-y-5">
-        <div className="grid grid-cols-2">
+      <div className="bg-black border-t-1 border-gray-600 w-full h-[1800px] lg:h-full lg:flex flex-col justify-center items-center p-10 space-y-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl w-full">
           <div className="text-white space-y-5 mx-10">
-            <h1 className="text-4xl font-bold">Our Services</h1>
-            <p className="text-lg">
+            <h1 className="text-2xl md:text-4xl font-bold font-righteous">
+              What We Offer
+            </h1>
+            <p className="text-md md:text-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Recusandae ab sunt velit ratione minima consequatur exercitationem
               nisi error maxime commodi. Cum cumque tenetur illum odit quas
               maxime minima qui facilis?
             </p>
-            <div>
-              <p className="text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-                minima obcaecati perferendis, in dignissimos tenetur repellat,
-                illo iure eligendi necessitatibus nostrum, architecto recusandae
-                exercitationem provident doloribus quod minus doloremque
-                corporis.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl w-full">
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-2xl w-full">
               <div className="flex items-center space-x-4 bg-secondary p-4 rounded">
-                <FaUserCheck className="text-secondary-bg text-2xl" />
-                <span className="text-lg text-secondary-bg">
+                <FaUserCheck className="text-secondary-bg text-md md:text-2xl" />
+                <span className="text-md md:text-lg text-secondary-bg">
                   Experienced and passionate tattoo artists
                 </span>
               </div>
               <div className="flex items-center space-x-4 bg-secondary p-4 rounded">
-                <FaShieldAlt className="text-secondary-bg text-2xl" />
-                <span className="text-lg text-secondary-bg">
+                <FaShieldAlt className="text-secondary-bg text-md md:text-2xl" />
+                <span className="text-md md:text-lg text-secondary-bg">
                   Clean, safe, and welcoming environment
                 </span>
               </div>
               <div className="flex items-center space-x-4 bg-secondary p-4 rounded">
-                <FaPenFancy className="text-secondary-bg text-2xl" />
-                <span className="text-lg text-secondary-bg">
+                <FaPenFancy className="text-secondary-bg text-md md:text-2xl" />
+                <span className="text-md md:text-lg text-secondary-bg">
                   Custom designs tailored to your ideas
                 </span>
               </div>
               <div className="flex items-center space-x-4 bg-secondary p-4 rounded">
-                <FaStar className="text-secondary-bg text-2xl" />
-                <span className="text-lg text-secondary-bg">
+                <FaStar className="text-secondary-bg text-md md:text-2xl" />
+                <span className="text-md md:text-lg text-secondary-bg">
                   High-quality inks and equipment
                 </span>
               </div>
               <div className="flex items-center space-x-4 bg-[#201E1F] p-4 rounded">
-                <FaSmile className="text-secondary-bg text-2xl" />
-                <span className="text-lg text-secondary-bg">
+                <FaSmile className="text-secondary-bg text-md md:text-2xl" />
+                <span className="text-md md:text-lg text-secondary-bg">
                   Friendly customer service and aftercare support
                 </span>
               </div>
             </div>
-            <button className="text-secondary bg-secondary-bg p-6 font-semibold text-xl hover:bg-amber-700 hover:text-primary hover:p-7 transition-all  duration-300">
+            <button className="text-secondary bg-secondary-bg p-4 md:p-6 font-semibold text-xl hover:bg-amber-700 hover:text-primary hover:p-7 transition-all  duration-300">
               Learn more about us
             </button>
           </div>
 
-          <div className="relative flex  justify-center ">
-            <img src={tattooImage1} alt="" className="h-100 w-80" />
-            <img
-              src={tattooImage2}
-              alt=""
-              style={{
-                transform: `translateY(${offset * 0.03}px)`,
-              }}
-              className="h-100 w-80 absolute top-50 right-30 transition-transform duration-500 ease-out"
-            />
+          <div className="flex  justify-center w-full">
+            <div className="relative w-80 ">
+              <img
+                src={tattooImage1}
+                alt=""
+                className="w-60 h-80 lg:h-100 lg:w-80 "
+              />
+              <img
+                src={tattooImage2}
+                alt=""
+                style={{
+                  transform: `translateY(${offset * 0.03}px)`,
+                }}
+                className="w-60 h-80 lg:h-100 lg:w-80 right-[-20%] top-30 absolute lg:top-50 lg:right-[-50%] transition-transform duration-500 ease-out"
+              />
+            </div>
           </div>
         </div>
       </div>
+      <Service />
+      <OurLocation />
     </div>
   );
 };

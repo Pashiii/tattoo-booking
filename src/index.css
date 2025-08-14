@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import "tailwindcss";
 
 @theme{
     --font-roboto: "Roboto", sans-serif;
+    --font-righteous: "Righteous", cursive;
     --color-background: #000000; 
     --color-secondary: #201E1F;
     --color-primary: #f0f0f0;
