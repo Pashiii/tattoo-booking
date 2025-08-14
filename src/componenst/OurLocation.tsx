@@ -16,7 +16,7 @@ const OurLocation = () => {
               className="w-full group-hover:scale-110 transition duration-300 object-cover"
             />
           </div>
-          <div className="bg-secondary p-5 rounded-b-lg shadow-lg w-full text-white relative">
+          <div className="bg-secondary p-5 rounded-b-lg shadow-lg w-full text-white relative text-cente">
             <h2 className="font-semibold text-3xl font-righteous text-center">
               Manila
             </h2>
@@ -36,7 +36,7 @@ const OurLocation = () => {
               className="w-full group-hover:scale-110 transition duration-300 object-cover"
             />
           </div>
-          <div className="bg-secondary p-5 rounded-b-lg shadow-lg w-full text-white relative">
+          <div className="bg-secondary p-5 rounded-b-lg shadow-lg w-full text-white relative text-cente">
             <h2 className="font-semibold text-3xl font-righteous text-center">
               Cebu
             </h2>
