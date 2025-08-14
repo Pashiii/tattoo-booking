@@ -33,7 +33,7 @@ const Service = () => {
               </p>
             </div>
           </div>
-          <button className="w-full text-secondary bg-secondary-bg p-4  md:p-4 font-semibold text-xl hover:bg-amber-700 hover:text-primary hover:p-7 transition-all  duration-300">
+          <button className="w-full text-secondary bg-secondary-bg p-4  md:p-4 font-semibold text-xl hover:bg-amber-700 hover:text-primary hover:p-5 transition-all  duration-300">
             Book now
           </button>
         </div>
