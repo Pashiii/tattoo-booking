@@ -56,8 +56,8 @@ const OurLocation = () => {
               className="w-full group-hover:scale-110 transition duration-300 object-cover"
             />
           </div>
-          <div className="bg-secondary p-5 rounded-b-lg shadow-lg w-full text-white relative">
-            <h2 className="font-semibold text-3xl font-righteous text-center">
+          <div className="bg-secondary p-5 rounded-b-lg shadow-lg w-full text-white relative text-center">
+            <h2 className="font-semibold text-3xl font-righteous">
               Davao
             </h2>
             <p>789 Roxas Avenue, Davao City, Philippines</p>
