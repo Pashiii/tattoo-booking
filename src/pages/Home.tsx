@@ -45,7 +45,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="bg-black border-t-1 border-gray-600 w-full h-[1800px] sm:h-[1200px] md:h-[1800px] lg:h-full lg:flex flex-col justify-center items-center p-10 space-5">
+      <div className="bg-black border-t-1 border-gray-600 w-full h-full lg:flex flex-col justify-center items-center p-10 space-5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl w-full">
           <div className="text-white space-y-5 mx-10">
             <h1 className="text-2xl md:text-4xl font-bold font-righteous">
@@ -95,12 +95,12 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="flex  justify-center w-full">
+          <div className="flex  justify-center w-full mb-30 lg:mb-20">
             <div className="relative w-80 ">
               <img
                 src={tattooImage1}
                 alt=""
-                className="w-40 h-60 sm:w-60 sm:h-80 lg:h-100 lg:w-80 "
+                className="w-40 h-60 sm:w-60 sm:h-80 lg:h-80 lg:w-56 xl:w-80 xl:h-100 "
               />
               <img
                 src={tattooImage2}
@@ -108,7 +108,7 @@ const Home = () => {
                 style={{
                   transform: `translateY(${offset * 0.03}px)`,
                 }}
-                className="w-40 h-60 sm:w-60 sm:h-80 md:w-56 md:h-80 lg:w-72 lg:h-96 xl:w-80 xl:h-100 object-cover  absolute right-5 top-15 sm:right-[-20%] sm:top-30 lg:top-50 lg:right-[-50%] transition-transform duration-500 ease-out"
+                className="w-40 h-60 sm:w-60 sm:h-80 lg:w-56 lg:h-80 xl:w-80 xl:h-100 object-cover  absolute right-5 top-15 sm:right-[-20%] sm:top-30 xl:top-30 xl:right-[-50%] transition-transform duration-500 ease-out"
               />
             </div>
           </div>
