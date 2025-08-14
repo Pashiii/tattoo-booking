@@ -1,4 +1,3 @@
-import React from "react";
 import Studio from "../assets/images/studio.jpg";
 const OurLocation = () => {
   return (

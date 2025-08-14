@@ -1,4 +1,3 @@
-import React from "react";
 import img from "../assets/images/img3.jpg";
 import { PiEarBold } from "react-icons/pi";
 import { LuPenTool } from "react-icons/lu";
