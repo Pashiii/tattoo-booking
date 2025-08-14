@@ -32,7 +32,7 @@ const Home = () => {
           <h1 className="text-center text-5xl text-white font-extrabold uppercase font-righteous">
             Welcome to Our Tattoo Shop
           </h1>
-          <h1 className="text-2xl text-white mt-2">
+          <h1 className="text-2xl text-white mt-2 text-center">
             Your journey to self-expression starts here
           </h1>
           <div className="mt-5 space-x-4">
