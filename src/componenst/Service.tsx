@@ -7,7 +7,7 @@ const Service = () => {
     <div className="h-full w-full p-5 py-10 ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl w-full mx-auto">
         <img src={img} alt="" width={500} />
-        <div className="text-white space-y-5 m-10  w-full">
+        <div className="text-white space-y-5 my-10  w-full ">
           <h1 className="text-6xl font-bold font-righteous">Our Services</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda

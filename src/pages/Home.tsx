@@ -100,7 +100,7 @@ const Home = () => {
               <img
                 src={tattooImage1}
                 alt=""
-                className="w-60 h-80 lg:h-100 lg:w-80 "
+                className="w-40 h-60 sm:w-60 sm:h-80 lg:h-100 lg:w-80 "
               />
               <img
                 src={tattooImage2}
@@ -108,7 +108,7 @@ const Home = () => {
                 style={{
                   transform: `translateY(${offset * 0.03}px)`,
                 }}
-                className="w-60 h-80 lg:h-100 lg:w-80 right-[-20%] top-30 absolute lg:top-50 lg:right-[-50%] transition-transform duration-500 ease-out"
+                className="w-40 h-60 sm:w-60 sm:h-80 md:w-56 md:h-80 lg:w-72 lg:h-96 xl:w-80 xl:h-100 object-cover  absolute right-5 top-15 sm:right-[-20%] sm:top-30 lg:top-50 lg:right-[-50%] transition-transform duration-500 ease-out"
               />
             </div>
           </div>
