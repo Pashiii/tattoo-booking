@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import OurLocation from "../componenst/OurLocation";
 import Service from "../componenst/Service";
+import ArtistCarousel from "../componenst/ArtistCarousel";
 const Home = () => {
   const [offset, setOffset] = useState(0);
   useEffect(() => {
@@ -58,33 +59,33 @@ const Home = () => {
               maxime minima qui facilis?
             </p>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-2xl w-full">
+            <div className="grid max-md:grid-cols-1 max-lg:grid-cols-2  max-xl:grid-cols-1 xl:grid-cols-2 gap-6 max-w-2xl w-full">
               <div className="flex items-center space-x-4 bg-secondary p-4 rounded">
-                <FaUserCheck className="text-secondary-bg text-md md:text-2xl" />
+                <FaUserCheck className="text-secondary-bg text-md md:text-2xl xl:text-3xl" />
                 <span className="text-md md:text-lg text-secondary-bg">
                   Experienced and passionate tattoo artists
                 </span>
               </div>
               <div className="flex items-center space-x-4 bg-secondary p-4 rounded">
-                <FaShieldAlt className="text-secondary-bg text-md md:text-2xl" />
+                <FaShieldAlt className="text-secondary-bg text-md md:text-2xl xl:text-3xl" />
                 <span className="text-md md:text-lg text-secondary-bg">
                   Clean, safe, and welcoming environment
                 </span>
               </div>
               <div className="flex items-center space-x-4 bg-secondary p-4 rounded">
-                <FaPenFancy className="text-secondary-bg text-md md:text-2xl" />
+                <FaPenFancy className="text-secondary-bg text-md md:text-2xl xl:text-3xl" />
                 <span className="text-md md:text-lg text-secondary-bg">
                   Custom designs tailored to your ideas
                 </span>
               </div>
               <div className="flex items-center space-x-4 bg-secondary p-4 rounded">
-                <FaStar className="text-secondary-bg text-md md:text-2xl" />
+                <FaStar className="text-secondary-bg text-md md:text-2xl xl:text-3xl" />
                 <span className="text-md md:text-lg text-secondary-bg">
                   High-quality inks and equipment
                 </span>
               </div>
               <div className="flex items-center space-x-4 bg-[#201E1F] p-4 rounded">
-                <FaSmile className="text-secondary-bg text-md md:text-2xl" />
+                <FaSmile className="text-secondary-bg text-md md:text-2xl xl:text-3xl" />
                 <span className="text-md md:text-lg text-secondary-bg">
                   Friendly customer service and aftercare support
                 </span>
@@ -116,6 +117,7 @@ const Home = () => {
       </div>
       <Service />
       <OurLocation />
+      <ArtistCarousel />
     </div>
   );
 };
