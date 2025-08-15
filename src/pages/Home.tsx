@@ -47,7 +47,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="bg-black border-t-1 border-gray-600 w-full h-full lg:flex flex-col justify-center items-center p-10 space-5">
+      <div className="bg-black border-t-1 border-gray-600 w-full h-full lg:flex flex-col justify-center items-center p-10 py-25 space-5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl w-full">
           <div className="text-white space-y-5 mx-10">
             <h1 className="text-2xl md:text-4xl font-bold font-righteous">
