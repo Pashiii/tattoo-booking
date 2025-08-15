@@ -1,7 +1,7 @@
 import Studio from "../assets/images/studio.jpg";
 const OurLocation = () => {
   return (
-    <div className="h-full w-full bg-white p-10">
+    <div className="h-full w-full bg-white px-10 py-30">
       <div className="flex flex-col items-center  max-w-7xl w-full mx-auto">
         <h1 className="font-bold text-6xl font-righteous text-center">
           Our Location

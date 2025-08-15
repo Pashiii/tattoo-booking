@@ -12,6 +12,7 @@ import {
 import OurLocation from "../componenst/OurLocation";
 import Service from "../componenst/Service";
 import ArtistCarousel from "../componenst/ArtistCarousel";
+import InfiniteText from "../componenst/InfiniteText";
 const Home = () => {
   const [offset, setOffset] = useState(0);
   useEffect(() => {
@@ -117,6 +118,8 @@ const Home = () => {
       </div>
       <Service />
       <OurLocation />
+      <InfiniteText items={["TATTOO STUDIO"]} />
+      <InfiniteText items={["TITLE"]} reverse repeat={10} />
       <ArtistCarousel />
     </div>
   );

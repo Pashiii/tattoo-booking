@@ -9,10 +9,29 @@
     --color-secondary: #201E1F;
     --color-primary: #f0f0f0;
     --color-secondary-bg: #ffcda2;
+
+
+    --animate-marquee: marquee 20s linear infinite;
+    --animate-marquee-reverse: marquee 20s linear infinite reverse -3s;
+
+    
+    @keyframes marquee {
+        to {
+          transform: translateX(calc(-100% - 20px));
+        }
+      }
+      @keyframes marquee_reverse {
+          to {
+              transform: translateX(calc(-100% - 20px));
+            }
+      }
+     
 }
 
+     
 .container {
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
-  }
+}
+
