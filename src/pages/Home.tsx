@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Header from "../assets/images/header.jpg";
 import tattooImage1 from "../assets/images/img3.jpg";
 import tattooImage2 from "../assets/images/img2.jpg";
 import {
@@ -13,6 +12,7 @@ import OurLocation from "../componenst/OurLocation";
 import Service from "../componenst/Service";
 import ArtistCarousel from "../componenst/ArtistCarousel";
 import InfiniteText from "../componenst/InfiniteText";
+import Hero from "../componenst/Hero";
 const Home = () => {
   const [offset, setOffset] = useState(0);
   useEffect(() => {
@@ -22,34 +22,10 @@ const Home = () => {
   }, []);
   return (
     <div className="w-full h-full bg-black font-roboto">
-      <div
-        className="w-full h-screen bg-fixed"
-        style={{
-          backgroundImage: `url(${Header})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="bg-black/50  w-full h-full flex flex-col justify-center items-center">
-          <h1 className="text-center text-5xl text-white font-extrabold uppercase font-righteous">
-            Welcome to Our Tattoo Shop
-          </h1>
-          <h1 className="text-2xl text-white mt-2 text-center">
-            Your journey to self-expression starts here
-          </h1>
-          <div className="mt-5 space-x-4">
-            <button className="p-5 text-white border-1 font-bold hover:bg-amber-700 hover:border-amber-700 transition-colors duration-300 ">
-              BOOK NOW
-            </button>
-            <button className="p-5 text-white border-1 font-bold hover:bg-amber-700 hover:border-amber-700 transition-colors duration-300 ">
-              LEARN MORE
-            </button>
-          </div>
-        </div>
-      </div>
+      <Hero />
       <div className="bg-black border-t-1 border-gray-600 w-full h-full lg:flex flex-col justify-center items-center p-10 py-25 space-5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl w-full">
-          <div className="text-white space-y-5 mx-10">
+          <div className="text-white space-y-5 sm:mx-10">
             <h1 className="text-2xl md:text-4xl font-bold font-righteous">
               What We Offer
             </h1>
