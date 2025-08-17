@@ -1,5 +1,6 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 interface Props {
   navList: {
@@ -12,7 +13,7 @@ interface Props {
 const MobileNav: React.FC<Props> = ({ navList, handleShowNavBar, showNav }) => {
   return (
     <div
-      className={`fixed top-0 left-0 bg-black/60 h-full w-full font-roboto transition-opacity duration-500 ${
+      className={`fixed top-0 left-0 bg-black/60 h-full w-full font-roboto transition-opacity duration-500 lg:hidden ${
         showNav
           ? "opacity-100 pointer-events-auto"
           : "opacity-0 pointer-events-none"
@@ -42,13 +43,20 @@ const MobileNav: React.FC<Props> = ({ navList, handleShowNavBar, showNav }) => {
                 key={index}
                 className="text-secondary hover:text-amber-600 transition-colors duration-300"
               >
-                <a>{list.name}</a>
+                <Link to={list.path} onClick={handleShowNavBar}>
+                  <a>{list.name}</a>
+                </Link>
               </li>
             ))}
           </ul>
-          <button className="bg-[#ffcda2] text-secondary p-3 px-10 font-bold hover:bg-amber-700 hover:text-primary transition-colors duration-300">
-            Book now
-          </button>
+          <Link to="/login" onClick={handleShowNavBar}>
+            <button
+              type="button"
+              className="bg-[#ffcda2] text-secondary p-3 px-10 font-bold hover:bg-amber-700 hover:text-primary transition-colors duration-300"
+            >
+              Book now
+            </button>
+          </Link>
         </div>
       </div>
     </div>
