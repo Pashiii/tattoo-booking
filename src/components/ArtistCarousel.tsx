@@ -47,7 +47,10 @@ const ArtistCarousel: React.FC = () => {
 
   return (
     <div className="w-full mx-auto p-10">
-      <h1 className="font-righteous text-white text-center text-6xl my-20">
+      <h1
+        className="font-righteous text-white text-center text-6xl my-20"
+        data-aos="fade-up"
+      >
         ARTIST
       </h1>
       <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-x-12 gap-y-10">
@@ -58,6 +61,8 @@ const ArtistCarousel: React.FC = () => {
             style={{
               perspective: "1000px",
             }}
+            data-aos="fade-up"
+            data-aos-delay={100 * index}
           >
             <div
               onMouseMove={(e) => handleMouseMove(e, index)}

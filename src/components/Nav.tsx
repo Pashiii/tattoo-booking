@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const navList = [
   { name: "Home", path: "/" },
+  { name: "Gallery", path: "/gallery" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
@@ -42,20 +43,22 @@ const Nav = () => {
           <div className="font-bold text-2xl">LOGO</div>
         </Link>
         <div className="lg:flex items-center space-x-4 hidden">
-          <ul className="flex space-x-6 font-medium">
+          <ul className="flex space-x-6">
             {navList.map((list, index) => (
               <li
                 key={index}
-                className="hover:text-amber-600 transition-colors duration-300"
+                className="hover:text-amber-600 transition-colors duration-300 font-semibold"
               >
-                <a>{list.name}</a>
+                <Link to={list.path}>
+                  <a>{list.name}</a>
+                </Link>
               </li>
             ))}
           </ul>
           <Link to="/login">
             <button
               type="button"
-              className="bg-[#ffcda2] text-secondary p-3 font-bold hover:bg-amber-700 hover:text-primary transition-colors duration-300"
+              className="bg-[#ffcda2] text-secondary p-3 font-bold hover:bg-amber-700 hover:text-primary transition-colors duration-300 "
             >
               Book now
             </button>

@@ -12,14 +12,14 @@ const Login: React.FC = () => {
   };
   return (
     <div
-      className="w-full  bg-fixed "
+      className="w-full  bg-fixed h-screen"
       style={{
         backgroundImage: `url(${Header})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="w-full h-full flex justify-center items-center font-roboto pt-50 pb-20">
+      <div className="w-full h-full flex justify-center items-center font-roboto">
         <div className="bg-black text-white w-full max-w-md p-8 rounded-lg shadow-lg">
           <h1 className="text-center font-righteous text-4xl">Login</h1>
           <form className="space-y-4 my-10 mx-5">
@@ -28,7 +28,7 @@ const Login: React.FC = () => {
               <CiUser className="text-xl" />
               <input
                 type="text"
-                className="outline-none p-2"
+                className="outline-none p-2  w-full"
                 placeholder="Enter you username"
               />
             </div>
@@ -39,7 +39,7 @@ const Login: React.FC = () => {
 
               <input
                 type={showPassword ? "text" : "password"}
-                className="outline-none p-2"
+                className="outline-none p-2 w-full"
                 placeholder="Enter you password"
               />
               <span

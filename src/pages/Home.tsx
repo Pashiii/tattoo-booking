@@ -8,11 +8,11 @@ import {
   FaStar,
   FaUserCheck,
 } from "react-icons/fa";
-import OurLocation from "../componenst/OurLocation";
-import Service from "../componenst/Service";
-import ArtistCarousel from "../componenst/ArtistCarousel";
-import InfiniteText from "../componenst/InfiniteText";
-import Hero from "../componenst/Hero";
+import OurLocation from "../components/OurLocation";
+import Service from "../components/Service";
+import ArtistCarousel from "../components/ArtistCarousel";
+import InfiniteText from "../components/InfiniteText";
+import Hero from "../components/Hero";
 const Home = () => {
   const [offset, setOffset] = useState(0);
   useEffect(() => {
@@ -25,7 +25,10 @@ const Home = () => {
       <Hero />
       <div className="bg-black border-t-1 border-gray-600 w-full h-full lg:flex flex-col justify-center items-center p-10 py-25 space-5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl w-full">
-          <div className="text-white space-y-5 sm:mx-10">
+          <div
+            className="text-white space-y-5 sm:mx-10"
+            data-aos="fade-up-right"
+          >
             <h1 className="text-2xl md:text-4xl font-bold font-righteous">
               What We Offer
             </h1>
@@ -73,7 +76,10 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="flex  justify-center w-full mb-30 lg:mb-20">
+          <div
+            className="flex  justify-center w-full mb-30 lg:mb-20"
+            data-aos="fade-up-left"
+          >
             <div className="relative w-80 ">
               <img
                 src={tattooImage1}

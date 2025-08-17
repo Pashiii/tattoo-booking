@@ -3,15 +3,25 @@ const OurLocation = () => {
   return (
     <div className="h-full w-full bg-white px-10 py-30">
       <div className="flex flex-col items-center  max-w-7xl w-full mx-auto">
-        <h1 className="font-bold text-6xl font-righteous text-center">
+        <h1
+          className="font-bold text-6xl font-righteous text-center"
+          data-aos="fade-up"
+        >
           Our Location
         </h1>
-        <p className="text-lg text-gray-600 mt-2 w-full lg:w-1/2 text-center">
+        <p
+          className="text-lg text-gray-600 mt-2 w-full lg:w-1/2 text-center"
+          data-aos="fade-up"
+        >
           Discover our branches across the Philippines. Visit us in Manila,
           Cebu, or Davao for your next tattoo experience!
         </p>
         <div className="mt-4 space-y-4 flex flex-col md:flex-row  md:space-y-0 md:justify-center">
-          <div className="flex flex-col items-center mx-auto w-full md:w-2/7 group">
+          <div
+            className="flex flex-col items-center mx-auto w-full md:w-2/7 group"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className="overflow-hidden rounded-t-lg shadow-lg">
               <img
                 src={Studio}
@@ -31,7 +41,11 @@ const OurLocation = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center mx-auto w-full md:w-2/7 group">
+          <div
+            className="flex flex-col items-center mx-auto w-full md:w-2/7 group"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className="overflow-hidden rounded-t-lg shadow-lg">
               <img
                 src={Studio}
@@ -51,7 +65,11 @@ const OurLocation = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center mx-auto w-full md:w-2/7  group">
+          <div
+            className="flex flex-col items-center mx-auto w-full md:w-2/7  group"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
             <div className="overflow-hidden rounded-t-lg shadow-lg">
               <img
                 src={Studio}

@@ -6,12 +6,19 @@ const Service = () => {
   return (
     <div className="h-full w-full p-5 py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl w-full mx-auto">
-        <div className="flex flex-col items-center space-y-5">
+        <div
+          className="flex flex-col items-center space-y-5"
+          data-aos="fade-up"
+        >
           <div className="w-full max-w-120">
             <img src={img} alt="" className="w-full" />
           </div>
         </div>
-        <div className="text-white space-y-5 my-10  w-full ">
+        <div
+          className="text-white space-y-5 my-10  w-full"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <h1 className="text-6xl font-bold font-righteous">Our Services</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda

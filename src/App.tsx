@@ -1,19 +1,25 @@
-import { Route, Routes } from "react-router-dom";
-import Footer from "./componenst/Footer";
-import Nav from "./componenst/Nav";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-
+import { useEffect } from "react";
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 320,
+      duration: 1000,
+      easing: "ease-in-out",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <>
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
+      <ScrollRestoration />
+      <Outlet />
       <Footer />
     </>
   );
