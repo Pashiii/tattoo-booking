@@ -44,7 +44,7 @@ const MobileNav: React.FC<Props> = ({ navList, handleShowNavBar, showNav }) => {
                 className="text-secondary hover:text-amber-600 transition-colors duration-300"
               >
                 <Link to={list.path} onClick={handleShowNavBar}>
-                  <a>{list.name}</a>
+                  {list.name}
                 </Link>
               </li>
             ))}
