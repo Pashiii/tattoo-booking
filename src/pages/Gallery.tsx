@@ -41,17 +41,28 @@ const Gallery = () => {
         </div>
       </div>
       <div className="bg-black h-full border-t-1 border-gray-50/70 text-white py-20">
-        <h1 className="text-center font-righteous font-bold text-5xl">
+        <h1
+          className="text-center font-righteous font-bold text-5xl"
+          data-aos="fade-up"
+        >
           TATTOO PHOTOS
         </h1>
-        <p className="text-center text-xl max-w-5xl w-full mx-auto mt-5">
+        <p
+          className="text-center text-xl max-w-5xl w-full mx-auto mt-5"
+          data-aos="fade-up"
+        >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum
           culpa perspiciatis dolores et dolore accusantium nemo voluptatum porro
           nostrum, fugit, fugiat ab illo sed id iusto in quisquam fuga.
         </p>
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-5 py-20">
           {tattoos.map((tattoo, index) => (
-            <div className="overflow-hidden" key={index}>
+            <div
+              className="overflow-hidden"
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={100 * index}
+            >
               <img
                 src={tattoo.img}
                 alt=""

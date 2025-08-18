@@ -8,7 +8,7 @@ import SmoothScrollRestoration from "./components/SmoothScrollRestoration";
 const App = () => {
   useEffect(() => {
     AOS.init({
-      offset: 320,
+      offset: 100,
       duration: 1000,
       easing: "ease-in-out",
       delay: 100,
