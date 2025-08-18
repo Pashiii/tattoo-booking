@@ -3,7 +3,8 @@ import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Outlet, ScrollRestoration } from "react-router-dom";
+import { Outlet } from "react-router";
+import SmoothScrollRestoration from "./components/SmoothScrollRestoration";
 const App = () => {
   useEffect(() => {
     AOS.init({
@@ -18,7 +19,7 @@ const App = () => {
   return (
     <>
       <Nav />
-      <ScrollRestoration />
+      <SmoothScrollRestoration />
       <Outlet />
       <Footer />
     </>
