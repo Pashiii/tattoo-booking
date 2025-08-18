@@ -49,9 +49,7 @@ const Nav = () => {
                 key={index}
                 className="hover:text-amber-600 transition-colors duration-300 font-semibold"
               >
-                <Link to={list.path}>
-                  <a>{list.name}</a>
-                </Link>
+                <Link to={list.path}>{list.name}</Link>
               </li>
             ))}
           </ul>
