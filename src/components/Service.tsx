@@ -4,7 +4,7 @@ import { LuPenTool } from "react-icons/lu";
 
 const Service = () => {
   return (
-    <div className="h-full w-full p-5 py-20">
+    <div id="our-service" className="h-full w-full p-5 py-20 scroll-mt-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl w-full mx-auto">
         <div
           className="flex flex-col items-center space-y-5"

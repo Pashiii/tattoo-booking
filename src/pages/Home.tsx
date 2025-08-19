@@ -23,7 +23,10 @@ const Home = () => {
   return (
     <div className="w-full h-full bg-black font-roboto">
       <Hero />
-      <div className="bg-black border-t-1 border-gray-600 w-full h-full lg:flex flex-col justify-center items-center p-10 py-25 space-5">
+      <div
+        id="what-offer"
+        className="bg-black border-t-1 border-gray-600 w-full h-full lg:flex flex-col justify-center items-center p-10 py-25 space-5 scroll-mt-24"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl w-full">
           <div
             className="text-white space-y-5 sm:mx-10"
@@ -71,9 +74,13 @@ const Home = () => {
                 </span>
               </div>
             </div>
-            <button className="text-secondary bg-secondary-bg p-4 md:p-6 font-semibold text-xl hover:bg-amber-700 hover:text-primary hover:p-7 transition-all  duration-300">
+
+            <a
+              href="#our-service"
+              className="inline-block text-secondary bg-secondary-bg p-4 md:p-6 font-semibold text-xl hover:bg-amber-700 hover:text-primary hover:p-7 transition-all  duration-300"
+            >
               Learn more about us
-            </button>
+            </a>
           </div>
 
           <div

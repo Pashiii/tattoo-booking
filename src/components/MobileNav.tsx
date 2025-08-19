@@ -1,16 +1,32 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
+import type { Artist } from "../types/types";
+import { useState } from "react";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 interface Props {
   navList: {
     name: string;
     path: string;
+    children?: undefined[];
   }[];
   handleShowNavBar: () => void;
   showNav: boolean;
+  data: Artist[];
 }
-const MobileNav: React.FC<Props> = ({ navList, handleShowNavBar, showNav }) => {
+const MobileNav: React.FC<Props> = ({
+  navList,
+  handleShowNavBar,
+  showNav,
+  data,
+}) => {
+  const [toggle, setToggle] = useState<boolean>(false);
+
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <div
       className={`fixed top-0 left-0 bg-black/60 h-full w-full font-roboto transition-opacity duration-500 lg:hidden ${
@@ -37,15 +53,52 @@ const MobileNav: React.FC<Props> = ({ navList, handleShowNavBar, showNav }) => {
           </div>
         </div>
         <div className="flex flex-col items-center gap-5">
-          <ul className="flex flex-col items-center justify-center space-y-4 font-bold text-2xl">
+          <ul className="w-full space-y-4 font-bold text-2xl text-center">
             {navList.map((list, index) => (
               <li
                 key={index}
                 className="text-secondary hover:text-amber-600 transition-colors duration-300"
               >
-                <Link to={list.path} onClick={handleShowNavBar}>
-                  {list.name}
-                </Link>
+                {list.children ? (
+                  <div className="inline-flex flex-col items-center relative">
+                    <Link to={list.path} onClick={handleShowNavBar}>
+                      {list.name}
+                    </Link>
+                    <RiArrowDropDownLine
+                      className={`absolute left-20 top-0 text-3xl cursor-pointer transition-transform duration-300 ${
+                        toggle == true ? "rotate-180" : ""
+                      }`}
+                      onClick={handleToggle}
+                    />
+                  </div>
+                ) : (
+                  <Link to={list.path} onClick={handleShowNavBar}>
+                    {list.name}
+                  </Link>
+                )}
+                {list.children && (
+                  <>
+                    {toggle && (
+                      <ul className="space-y-2 py-4">
+                        {data.map((artist, index) => (
+                          <li
+                            key={index}
+                            className="transition-colors duration-300 cursor-pointer "
+                          >
+                            <Link
+                              to={`/artist/${artist.name
+                                .split(" ")
+                                .join("-")
+                                .toLowerCase()}`}
+                            >
+                              {artist.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                )}
               </li>
             ))}
           </ul>

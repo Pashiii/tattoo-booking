@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Home from "../pages/Home";
 import ErrorPage from "../components/ErrorPage";
 import Gallery from "../pages/Gallery";
+import Artist from "../pages/Artist";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "gallery",
         element: <Gallery />,
+      },
+      {
+        path: "artist/:slug",
+        element: <Artist />,
       },
     ],
   },

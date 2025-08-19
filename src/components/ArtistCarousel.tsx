@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import img2 from "../assets/images/img2.jpg";
-
-interface Artist {
-  img: string;
-  name: string;
-  position: string;
-}
+import axios from "axios";
+import type { Artist } from "../types/types";
+import { Link } from "react-router-dom";
 const ArtistCarousel: React.FC = () => {
-  const artists: Artist[] = [
-    { img: img2, name: "Full Name", position: "Tattoo & Piercing" },
-    { img: img2, name: "Full Name", position: "Tattoo" },
-    { img: img2, name: "Full Name", position: "Tattoo" },
-    { img: img2, name: "Full Name", position: "Piercing" },
-    { img: img2, name: "Full Name", position: "Tattoo & Piercing" },
-  ];
-
   const [transform, setTransform] = useState<Record<number, string>>({});
+
+  const [data, setData] = useState<Artist[]>([]);
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get<Artist[]>(`/api/artist`);
+      setData(response?.data);
+      console.log(response);
+    };
+
+    getData();
+  }, []);
 
   const handleMouseMove = (
     e: React.MouseEvent<HTMLDivElement>,
@@ -54,38 +54,44 @@ const ArtistCarousel: React.FC = () => {
         ARTIST
       </h1>
       <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-x-12 gap-y-10">
-        {artists.map((artist, index) => (
-          <div
-            key={index}
-            className="relative transition-transform duration-200"
-            style={{
-              perspective: "1000px",
-            }}
-            data-aos="fade-up"
-            data-aos-delay={100 * index}
+        {data.map((artist, index) => (
+          <Link
+            to={`/artist/${artist.name.split(" ").join("-").toLowerCase()}`}
           >
             <div
-              onMouseMove={(e) => handleMouseMove(e, index)}
-              onMouseLeave={() => handleMouseLeave(index)}
-              className="relative cursor-pointer rounded-lg overflow-hidden transition-transform duration-200 ease-out"
+              key={index}
+              className="relative transition-transform duration-200"
               style={{
-                transform: transform[index] || "rotateX(0) rotateY(0)",
-                transformStyle: "preserve-3d",
+                perspective: "1000px",
               }}
+              data-aos="fade-up"
+              data-aos-delay={100 * index}
             >
-              <img
-                src={artist.img}
-                alt={artist.name}
-                className="w-70 h-full object-cover"
-              />
-              <div className="absolute bottom-5 left-5">
-                <p className="mt-3 text-xl font-righteous text-secondary-bg">
-                  {artist.name}
-                </p>
-                <p className="text-lg text-secondary-bg">{artist.position}</p>
+              <div
+                onMouseMove={(e) => handleMouseMove(e, index)}
+                onMouseLeave={() => handleMouseLeave(index)}
+                className="relative cursor-pointer rounded-lg overflow-hidden transition-transform duration-200 ease-out"
+                style={{
+                  transform: transform[index] || "rotateX(0) rotateY(0)",
+                  transformStyle: "preserve-3d",
+                }}
+              >
+                <img
+                  src={img2}
+                  alt={artist.name}
+                  className="w-70 h-full object-cover"
+                />
+                <div className="absolute bottom-5 left-5">
+                  <p className="mt-3 text-xl font-righteous text-secondary-bg">
+                    {artist.name}
+                  </p>
+                  <p className="text-lg text-secondary-bg">
+                    {artist.specialty.join(", ")}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

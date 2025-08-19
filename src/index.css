@@ -27,6 +27,9 @@
       }
      
 }
+html {
+  scroll-behavior: smooth;
+}
 
      
 .container {

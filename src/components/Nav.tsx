@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import MobileNav from "./MobileNav";
 import { Link } from "react-router-dom";
+import { useArtist } from "../context/ArtistContext";
 
 const navList = [
   { name: "Home", path: "/" },
-  { name: "Gallery", path: "/gallery" },
+  { name: "Gallery", path: "/gallery", children: [] },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
@@ -15,16 +16,19 @@ const Nav = () => {
   const [scrollY, setScrollY] = useState(false);
   const [showNav, setShowNav] = useState(false);
 
+  const { data } = useArtist();
+
   const handleShowNavBar = () => {
     setShowNav(!showNav);
   };
-  window.addEventListener("scroll", function () {
-    if (this.window.scrollY > 150) {
-      setScrollY(true);
-    } else {
-      setScrollY(false);
-    }
-  });
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY > 150);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div
@@ -36,6 +40,7 @@ const Nav = () => {
         navList={navList}
         handleShowNavBar={handleShowNavBar}
         showNav={showNav}
+        data={data}
       />
 
       <div className="flex justify-between items-center w-full container">
@@ -43,13 +48,34 @@ const Nav = () => {
           <div className="font-bold text-2xl">LOGO</div>
         </Link>
         <div className="lg:flex items-center space-x-4 hidden">
-          <ul className="flex space-x-6">
+          <ul className="flex space-x-6 ">
             {navList.map((list, index) => (
-              <li
-                key={index}
-                className="hover:text-amber-600 transition-colors duration-300 font-semibold"
-              >
-                <Link to={list.path}>{list.name}</Link>
+              <li key={index} className=" font-semibold group relative">
+                <Link
+                  to={list.path}
+                  className="hover:text-amber-600 transition-colors duration-300"
+                >
+                  {list.name}
+                </Link>
+                {list.children && (
+                  <div className="absolute hidden group-hover:block w-50 space-y-2 py-4">
+                    {data.map((artist, index) => (
+                      <p
+                        key={index}
+                        className="hover:text-amber-600 transition-colors duration-300 cursor-pointer"
+                      >
+                        <Link
+                          to={`/artist/${artist.name
+                            .split(" ")
+                            .join("-")
+                            .toLowerCase()}`}
+                        >
+                          {artist.name}
+                        </Link>
+                      </p>
+                    ))}
+                  </div>
+                )}
               </li>
             ))}
           </ul>

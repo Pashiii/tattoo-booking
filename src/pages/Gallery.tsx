@@ -1,4 +1,4 @@
-import Header from "../assets/images/header.jpg";
+import Header from "../assets/images/header2.jpg";
 import img2 from "../assets/images/img1.jpg";
 import img3 from "../assets/images/img3.jpg";
 import GalleryView from "../components/GalleryView";
@@ -58,7 +58,7 @@ const Gallery = () => {
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-5 py-20">
           {tattoos.map((tattoo, index) => (
             <div
-              className="overflow-hidden"
+              className="overflow-hidden rounded-full"
               key={index}
               data-aos="fade-up"
               data-aos-delay={100 * index}
@@ -66,7 +66,7 @@ const Gallery = () => {
               <img
                 src={tattoo.img}
                 alt=""
-                className="w-70 h-full object-cover hover:scale-110  duration-400 ease-in-out"
+                className="w-50 md:w-70 h-full object-cover hover:scale-110  duration-400 ease-in-out"
                 onClick={() => handleViewPhoto(index)}
               />
             </div>

@@ -7,9 +7,9 @@ import {
 } from "react-icons/fa";
 const Footer: React.FC = () => {
   return (
-    <div className="bg-black w-full  text-secondary-bg px-20 pb-10">
-      <div className="grid grid-cols-5 gap-5 py-10">
-        <div className="col-span-2 w-2/3">
+    <div className="bg-black w-full  text-secondary-bg px-10 md:px-20 pb-10">
+      <div className="grid md:grid-cols-5 gap-5 py-10">
+        <div className="col-span-2 md:w-2/3">
           <h1 className="text-3xl font-righteous w-full">LOGO</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
@@ -43,8 +43,8 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <hr className="border-t-1 text-secondary-bg/50" />
-      <div className="flex justify-between ">
-        <div className="flex items-center justify-center gap-2 text-lg">
+      <div className="md:flex  items-center justify-between ">
+        <div className="flex items-center  gap-2 text-lg">
           <FaRegCopyright />
           Feliciano
         </div>

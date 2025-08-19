@@ -23,7 +23,7 @@ const Register: React.FC = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-full h-full flex justify-center items-center font-roboto ">
+      <div className="w-full h-full flex justify-center items-center font-roboto bg-black/50">
         <div className="bg-black text-white w-full max-w-md p-8 rounded-lg shadow-lg">
           <h1 className="text-center font-righteous text-4xl">Register</h1>
           <form className="space-y-4 my-10 mx-5">
