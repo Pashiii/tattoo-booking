@@ -82,24 +82,22 @@ const Home = () => {
               Learn more about us
             </a>
           </div>
-
-          <div
-            className="flex  justify-center w-full mb-30 lg:mb-20"
-            data-aos="fade-up-left"
-          >
-            <div className="relative w-80 ">
+          <div className="relative" data-aos="fade-up-left">
+            <div className="w-2/3">
               <img
                 src={tattooImage1}
-                alt=""
-                className="w-40 h-60 sm:w-60 sm:h-80 lg:h-80 lg:w-56 xl:w-80 xl:h-100 "
+                alt="Tattoo Artist"
+                className="rounded-lg  w-full object-cover"
               />
+            </div>
+            <div className="w-2/3 absolute right-0 top-20 sm:top-50">
               <img
                 src={tattooImage2}
-                alt=""
+                alt="Tattoo Artist"
                 style={{
                   transform: `translateY(${offset * 0.03}px)`,
                 }}
-                className="w-40 h-60 sm:w-60 sm:h-80 lg:w-56 lg:h-80 xl:w-80 xl:h-100 object-cover  absolute right-5 top-15 sm:right-[-20%] sm:top-30 xl:top-30 xl:right-[-50%] transition-transform duration-500 ease-out"
+                className=" rounded-lg w-full transition-transform duration-500 ease-out object-cover"
               />
             </div>
           </div>

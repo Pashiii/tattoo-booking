@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import img2 from "../assets/images/img2.jpg";
-import axios from "axios";
-import type { Artist } from "../types/types";
+
 import { Link } from "react-router-dom";
+import { useArtist } from "../context/ArtistContext";
 const ArtistCarousel: React.FC = () => {
   const [transform, setTransform] = useState<Record<number, string>>({});
 
-  const [data, setData] = useState<Artist[]>([]);
-  useEffect(() => {
-    const getData = async () => {
-      const response = await axios.get<Artist[]>(`/api/artist`);
-      setData(response?.data);
-      console.log(response);
-    };
+  // const [data, setData] = useState<Artist[]>([]);
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const response = await axios.get<Artist[]>(`/api/artist`);
+  //     setData(response?.data);
+  //     console.log(response);
+  //   };
 
-    getData();
-  }, []);
+  //   getData();
+  // }, []);
+
+  const { data } = useArtist();
 
   const handleMouseMove = (
     e: React.MouseEvent<HTMLDivElement>,
