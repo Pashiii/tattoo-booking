@@ -28,10 +28,7 @@ const Home = () => {
         className="bg-black border-t-1 border-gray-600 w-full h-full lg:flex flex-col justify-center items-center p-10 py-25 space-5 scroll-mt-24"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl w-full">
-          <div
-            className="text-white space-y-5 sm:mx-10"
-            data-aos="fade-up-right"
-          >
+          <div className="text-white space-y-5 sm:mx-10" data-aos="fade-up">
             <h1 className="text-2xl md:text-4xl font-bold font-righteous">
               What We Offer
             </h1>
@@ -82,7 +79,7 @@ const Home = () => {
               Learn more about us
             </a>
           </div>
-          <div className="relative" data-aos="fade-up-left">
+          <div className="relative" data-aos="fade-up" data-aos-delay="200">
             <div className="w-2/3">
               <img
                 src={tattooImage1}
