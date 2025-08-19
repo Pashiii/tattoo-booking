@@ -66,7 +66,7 @@ const Gallery = () => {
               <img
                 src={tattoo.img}
                 alt=""
-                className="w-50 md:w-70 h-full object-cover hover:scale-110  duration-400 ease-in-out"
+                className="w-30 sm:w-50 md:w-70 h-full object-cover hover:scale-110  duration-400 ease-in-out"
                 onClick={() => handleViewPhoto(index)}
               />
             </div>
