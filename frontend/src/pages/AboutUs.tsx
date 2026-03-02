@@ -1,10 +1,8 @@
-import React from "react";
 import Header from "../assets/images/header.jpg";
 import img from "../assets/images/header2.jpg";
 import img2 from "../assets/images/img2.jpg";
-type Props = {};
 
-const AboutUs = (props: Props) => {
+const AboutUs = () => {
   return (
     <div className="h-full w-full ">
       <div
